@@ -1,0 +1,280 @@
+.text-remark{
+  color: $text-remark;
+}
+.text-title{
+  color: $text-title;
+}
+.text-error{
+  color: $common-error;
+}
+.text-success{
+ color: $common-success;
+}
+.text-warning{
+  color: $common-warning;
+}
+.text-dangerous{
+  color: $common-dangerous;
+}
+
+.common-frame-wrapper{
+  .frame-wrapper{
+    display: flex;
+    flex-direction: column;
+    padding: 16px;
+    padding-right: 12px;
+    height: 100%;
+    &-content{
+      flex: 1;
+      background-color: #ffffff;
+      padding: 20px 24px;
+    }
+    .frame-query{
+      padding-bottom: 4px;
+      .ant-form-item{
+        margin-bottom: 4px;
+      }
+    }
+    .frame-hr{
+      width: 100%;
+      height: 16px;
+      background-color: #f2f3f5;
+    }
+    .frame-content{
+      //padding-top: 4px;
+    }
+    .frame-content-table{
+      .ant-table-body{
+        tr > th, tr > td {
+          border-bottom: none;
+          &:first-child{
+            padding-left: 16px;
+          }
+          &:last-child{
+            padding-right: 16px;
+          }
+        }
+      }
+      .ant-table-thead > tr > th{
+        background-color: #F5F5F5;
+        //background: #FAFAFA;
+      }
+      .ant-table-tbody > tr:nth-child(2n){
+        background: #FAFAFA;
+      }
+      .ant-table-placeholder{
+        border: none;
+      }
+      .frame-table-bold{
+        font-weight: bold;
+        color: #333333;
+      }
+
+    }
+  }
+  .query-item-prefix{
+    height: 100%;
+    width: auto;
+    font-size: 13px;
+    text-align:center;
+    padding-right: 10px;
+    border-right: 1px solid #ddd;
+  }
+  @for $i from 5 to 12 {
+    .custom-prefix-#{$i} {
+      .query-item-prefix{
+        width: 30+$i*10px;
+      }
+      input{
+        padding-left: 50+$i*10px!important;
+      }
+    }
+  }
+}
+
+.common-text-subtitle{
+  border-left: 4px solid $common-base;
+  padding-left: 8px;
+  height: 22px;
+  line-height: 22px;
+  font-weight: bold;
+  font-size: 16px;
+  margin: 10px 0;
+}
+input::placeholder {
+  font-family: Avenir, Helvetica, Arial, sans-serif;
+  font-size: 14px;
+  color: #BFBFBF !important;
+}
+button:focus{
+  outline:none
+}
+.dot-badge {
+  .ant-badge-dot{
+    width: 8px;
+    height: 8px;
+    right: -3px!important;
+  }
+}
+.dot-badge-only{
+  width: 6px;
+  height: 6px;
+  margin: 0 5px 0 -10px;
+  .ant-badge-dot{
+    top: 1px;
+    left: -2px;
+  }
+}
+
+
+// 定制化 tabs
+.custom-card-container {
+  overflow: hidden;
+  background-color: #fff;
+}
+.custom-card-container_hidden{
+  .ant-tabs-bar{
+    visibility: hidden;
+  }
+}
+.custom-card-container .ant-tabs-nav-container{
+  border-bottom: 1px solid $common-base-active;
+}
+.custom-card-container > .ant-tabs-card > .ant-tabs-content {
+  margin-top: -16px;
+}
+
+.custom-card-container > .ant-tabs-card > .ant-tabs-content > .ant-tabs-tabpane {
+  background: #fff;
+  padding: 8px 0;
+}
+
+.custom-card-container > .ant-tabs-card > .ant-tabs-bar {
+  border-color: #fff;
+}
+
+.custom-card-container > .ant-tabs-card > .ant-tabs-bar .ant-tabs-tab {
+  border-color: transparent;
+  background: transparent;
+}
+
+.custom-card-container > .ant-tabs-card > .ant-tabs-bar .ant-tabs-tab-active {
+  border-color: #fff;
+  color: #ffffff;
+  background: $common-base-active;
+  border-radius: 0;
+}
+
+// 资质要素详情页
+.qualifies-info-wrapper{
+  .info-item{
+    padding: 7px 0;
+    position: relative;
+    &_date{
+      position: absolute;
+      top: 0;
+      right: 20px;
+      text-align: left;
+      height: 20px;
+      line-height: 20px;
+      font-size: 14px;
+      color: $text-remark;
+      span{
+        font-size: 16px;
+        color: $text-title;
+      }
+    }
+    &_title{
+      border-left: 4px solid $common-base-active;
+      padding-left: 8px;
+      font-size: 16px;
+      height: 22px;
+      line-height: 22px;
+    }
+    &_subtitle{
+      font-size: 14px;
+      height: 25px;
+      line-height: 25px;
+      color: $text-title;
+      font-weight: bolder;
+    }
+    &_list{
+      margin:22px 0;
+      display: flex;
+      line-height: 25px;
+      padding-right: 40px;
+      &-title{
+        width: 33.3%;
+        font-size: 14px;
+        color: $text-title;
+        text-align: right;
+        padding-right: 10px;
+        &:after{
+          content:"\ff1a";
+        }
+      }
+      &-content{
+        flex: 1;
+        color: $text-content;
+        .remark{
+          display: block;
+          font-size: 12px;
+          color: $text-remark;
+        }
+      }
+    }
+  }
+}
+
+.ant-upload-list-item:hover{
+  .ant-upload-list-item-info{
+    background: none;
+    > span{
+      cursor: pointer;
+      border-bottom: 1px solid #008CB0;
+      color: #008CB0;
+    }
+  }
+}
+
+.ant-upload-list-item .ant-upload-list-item-info > span {
+  .ant-upload-list-item-name{
+    color: rgba(0, 140, 176, 0.73)
+  }
+}
+
+
+.frame-content-table{
+  .ant-table-body{
+    tr > th, tr > td {
+      border-bottom: none;
+      &:first-child{
+        padding-left: 16px;
+      }
+      &:last-child{
+        padding-right: 16px;
+      }
+    }
+  }
+  .ant-table-thead > tr > th{
+    background-color: #F5F5F5;
+    //background: #FAFAFA;
+  }
+  .ant-table-tbody > tr:nth-child(2n){
+    background: #FAFAFA;
+  }
+  .ant-table-placeholder{
+    border: none;
+  }
+  .frame-table-bold{
+    font-weight: bold;
+    color: #333333;
+  }
+
+  .frame-content-table_auction{
+    padding-left: 15px;
+    button{
+     padding: 0;
+    }
+  }
+}
